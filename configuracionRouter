@@ -1,0 +1,19 @@
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname S2
+S2(config)#enable password class
+S2(config)#line console 0
+S2(config-line)#password cisco
+S2(config-line)#login
+S2(config-line)#exit
+S2(config)#line vty 0 4
+S2(config-line)#password cisco
+S2(config-line)#login
+S2(config-line)#exit
+S2(config)#line Vla
+S2(config)#line Vla
+S2(config)#line Vla
+S2(config)#interface V
+S2(config)#interface Vlan 1
+S2(config-if)#ip address 192.168.1.12 255.255.255.
